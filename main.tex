@@ -28,6 +28,8 @@
 \usepackage[magyar]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[style=alphabetic]{biblatex}
+%\AtNextBibliography{\small}
+\renewcommand*{\bibfont}{\small}
 
 \bibliography{refs}
 
@@ -65,6 +67,9 @@
 \usepackage{graphicx}  % Required for including images
 
 \usepackage{booktabs} % Top and bottom rules for tables
+
+%https://tex.stackexchange.com/questions/33969/changing-font-size-of-selected-slides-in-beamer
+\newcommand\Fontvi{\fontsize{22}{7.2}\selectfont}
 
 
 %title----------------------------------------------------------------------------------------
@@ -176,7 +181,9 @@
 \end{columns} % End of the split of column 2 - any content after this will now take up 2 columns width
 
 \begin{column}{\twocolwid}
-\begin{block}{ref}
+\begin{block}{References}
+
+
 \printbibliography
 \end{block}
 \end{column}
