@@ -1,0 +1,15 @@
+* klikk+csillag poster 
+
+* [[./main.tex][main]]
+
+* klikkes
+** [[./klikkClusCoeff.tex][klikk clustering coeff]]
+** [[./klikkModel.tex][klikk description]]
+* [[./klikkScaleFree.tex][klikk scale-free]]
+* [[./klikkSmallWorld.tex][klikk small-world]]
+
+* csillagos
+** [[./csillClusCoeff.tex][csillagos clustering coeff]]
+** [[./csillModel.tex][csillagos description]]
+* [[./ScaleFree.tex][csillagos scale-free]]
+* [[./csillagosSmallWorld.tex][csillagos small-world]]

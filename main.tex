@@ -1,0 +1,191 @@
+%template author%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jacobs Landscape Poster
+% LaTeX Template
+% Version 1.1 (14/06/14)
+%
+% Created by:
+% Computational Physics and Biophysics Group, Jacobs University
+% https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
+% 
+% Further modified by:
+% Nathaniel Johnston (nathaniel@njohnston.ca)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[final]{beamer}
+
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[style=alphabetic]{biblatex}
+
+\bibliography{refs}
+
+\usepackage[scale=1.3]{beamerposter} % Use the beamerposter package for laying out the poster
+
+\usetheme{confposter} % Use the confposter theme supplied with this template
+
+\setbeamercolor{block title}{fg=ngreen,bg=white} % Colors of the block titles
+\setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
+\setbeamercolor{block alerted title}{fg=white,bg=dblue!70} % Colors of the highlighted block titles
+\setbeamercolor{block alerted body}{fg=black,bg=dblue!10} % Colors of the body of highlighted blocks
+% Many more colors are available for use in beamerthemeconfposter.sty
+
+%-----------------------------------------------------------
+% Define the column widths and overall poster size
+% To set effective sepwid, onecolwid and twocolwid values, first choose how many columns you want and how much separation you want between columns
+% In this template, the separation width chosen is 0.024 of the paper width and a 4-column layout
+% onecolwid should therefore be (1-(# of columns+1)*sepwid)/# of columns e.g. (1-(4+1)*0.024)/4 = 0.22
+% Set twocolwid to be (2*onecolwid)+sepwid = 0.464
+% Set threecolwid to be (3*onecolwid)+2*sepwid = 0.708
+
+\newlength{\sepwid}
+\newlength{\onecolwid}
+\newlength{\twocolwid}
+\newlength{\threecolwid}
+\setlength{\paperwidth}{48in} % A0 width: 46.8in
+\setlength{\paperheight}{36in} % A0 height: 33.1in
+\setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
+\setlength{\onecolwid}{0.22\paperwidth} % Width of one column
+\setlength{\twocolwid}{0.464\paperwidth} % Width of two columns
+\setlength{\threecolwid}{0.708\paperwidth} % Width of three columns
+\setlength{\topmargin}{-0.3in} % Reduce the top margin size
+%-----------------------------------------------------------
+
+\usepackage{graphicx}  % Required for including images
+
+\usepackage{booktabs} % Top and bottom rules for tables
+
+
+%title----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+
+\title{A comparison of two interaction based random graph models} % Poster title
+
+\author{Cs.Noszály, N.Uzonyi} % Author(s)
+
+\institute{Faculty of Informatics, University of Debrecen} % Institution(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\addtobeamertemplate{block end}{}{\vspace*{2ex}} % White space under blocks
+\addtobeamertemplate{block alerted end}{}{\vspace*{2ex}} % White space under highlighted (alert) blocks
+
+\setlength{\belowcaptionskip}{2ex} % White space under figures
+\setlength\belowdisplayshortskip{2ex} % White space under equations
+
+\begin{frame}[t] % The whole poster is enclosed in one beamer frame
+
+\begin{columns}[t] % The whole poster consists of two major columns, each of which is split into two columns - the [t] option aligns each column's content to the top
+
+\begin{column}{\sepwid}\end{column} % Empty spacer column
+
+
+%%%%%%% 1 col
+\begin{column}{\twocolwid} % Begin a column which is two columns wide (column 1)
+
+%%%%%%% split of 1 col
+\begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+
+%%%%%%% 1.1 col
+\begin{column}{\onecolwid}\vspace{-.6in} % The first column within column 1 (column 1.1)
+
+% the model description
+\input{klikkModel.tex}
+
+% scale-freeness
+\input{klikkScaleFree.tex}
+
+% small-world
+\input{klikkSmallWorld.tex}
+
+\end{column} % End of column 1.1
+
+
+%%%%%%% 1.2 col
+\begin{column}{\onecolwid}\vspace{-.6in} % The second column within column 1 (column 1.2)
+
+% clustering coefficient
+\input{klikkClusCoeff.tex}
+
+  \begin{block}{Methods}
+\end{block}
+
+\end{column}
+
+\end{columns} % End of the split of column 1
+
+\begin{column}{\twocolwid}
+\begin{block}{valami}
+
+\end{block}
+\end{column}
+
+\end{column}
+
+
+%%%%%%% 2 col
+\begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
+
+%%%%%%% split of 2
+\begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
+
+%%%%%%% 2.1 col
+\begin{column}{\onecolwid}\vspace{-.6in} % The first column within column 2 (column 2.1)
+
+% the model description
+\input{csillModel.tex}
+
+% scale-freeness
+\input{csillScaleFree.tex}
+
+% small-world
+\input{csillSmallWorld.tex}
+
+  
+\end{column} % End of column 2.1
+
+
+%%%%%%% 2.2 col
+\begin{column}{\onecolwid}\vspace{-.6in} % The second column within column 2 (column 2.2)
+
+% clustering coefficient
+\input{csillClusCoeff.tex}
+
+  
+\begin{block}{Methods}
+\end{block}
+
+%----------------------------------------------------------------------------------------
+
+\end{column} % End of column 2.2
+
+\end{columns} % End of the split of column 2 - any content after this will now take up 2 columns width
+
+\begin{column}{\twocolwid}
+\begin{block}{ref}
+\printbibliography
+\end{block}
+\end{column}
+
+
+\end{column} % end of col 2
+
+\end{columns} % End of all the columns in the poster
+
+\end{frame} % End of the enclosing frame
+
+\end{document}
