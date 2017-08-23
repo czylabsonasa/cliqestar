@@ -1,6 +1,4 @@
-\begin{block}{Small-world property}
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{./fig/klikkdiam4.pdf}
-%\caption{Figure caption}
-\end{figure}
+\begin{block}{Small-world property}\small
+Finding the exact diameter of large graphs is a computationally intensive task. We implemented the method proposed in \cite{CreMa}. The algorithm iteratively refines the lower and upper bound for the given graph using breadth first searches. We generated ca. 1000 instances of the $N$-clique models for various parameters, and determined the additive $2$-approximations of the diameter. In the figures the red and blue marks are the upper and lower bounds for $\frac{diam(G(V,E))}{\log(|V|)}$. From practical point of view one can conclude that the diameter is in $O(\log(|V|))$.
 \end{block}
+

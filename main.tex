@@ -29,7 +29,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[style=alphabetic]{biblatex}
 %\AtNextBibliography{\small}
-\renewcommand*{\bibfont}{\small}
+%\renewcommand*{\bibfont}{\small}
+\renewcommand*{\bibfont}{\tiny}
 
 \bibliography{refs}
 
@@ -123,24 +124,25 @@
 %%%%%%% 1.2 col
 \begin{column}{\onecolwid}\vspace{-.6in} % The second column within column 1 (column 1.2)
 
-% clustering coefficient
-\input{klikkClusCoeff.tex}
 
-  \begin{block}{Methods}
-\end{block}
+% clustering coefficient
+\input{klikkSmallWorld2.tex}
+  
+\input{klikkClusCoeff.tex}
 
 \end{column}
 
 \end{columns} % End of the split of column 1
 
-\begin{column}{\twocolwid}
-\begin{block}{valami}
+%% \begin{column}{\twocolwid}
+%% \begin{block}{valami}
 
-\end{block}
-\end{column}
+%% \end{block}
+%% \end{column}
 
-\end{column}
+\end{column}%bal oszlop
 
+\begin{column}{\sepwid}\end{column} % Empty spacer column
 
 %%%%%%% 2 col
 \begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
@@ -150,7 +152,7 @@
 
 %%%%%%% 2.1 col
 \begin{column}{\onecolwid}\vspace{-.6in} % The first column within column 2 (column 2.1)
-
+  
 % the model description
 \input{csillModel.tex}
 
@@ -166,12 +168,12 @@
 
 %%%%%%% 2.2 col
 \begin{column}{\onecolwid}\vspace{-.6in} % The second column within column 2 (column 2.2)
-
 % clustering coefficient
 \input{csillClusCoeff.tex}
 
   
-\begin{block}{Methods}
+\begin{block}{References}
+\printbibliography
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -179,14 +181,6 @@
 \end{column} % End of column 2.2
 
 \end{columns} % End of the split of column 2 - any content after this will now take up 2 columns width
-
-\begin{column}{\twocolwid}
-\begin{block}{References}
-
-
-\printbibliography
-\end{block}
-\end{column}
 
 
 \end{column} % end of col 2

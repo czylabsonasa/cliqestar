@@ -9,11 +9,10 @@
 ** [[./klikkScaleFree.tex][klikk scale-free]]
 ** [[./klikkClusCoeff.tex][klikk clustering coeff]]
 ** [[./klikkSmallWorld.tex][klikk small-world]]
-
-
+** [[./klikkSmallWorld2.tex][klikk small-world kep]]
 * csillagos
 ** [[./csillModel.tex][csillagos description]]
-** [[./ScaleFree.tex][csillagos scale-free]]
+** [[./csillScaleFree.tex][csillagos scale-free]]
 ** [[./csillClusCoeff.tex][csillagos clustering coeff]]
-** [[./csillagosSmallWorld.tex][csillagos small-world]]
+** [[./csillSmallWorld.tex][csillagos small-world]]
 
