@@ -1,3 +1,2 @@
 # cliquestar
-tex files of a poster
-isspsm 2017 debrecen
+a poster made for isspsm 2017 debrecen
